@@ -1,0 +1,4 @@
+Hello world!
+This is an example file.
+It contains words and numbers like 12345.
+There are also some special characters: @#*&.
