@@ -1,0 +1,3 @@
+The alphabet starts with abc.
+Another occurrence: abcdef
+and abcd is  entirely replaced.
