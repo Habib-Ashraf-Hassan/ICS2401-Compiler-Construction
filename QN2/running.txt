@@ -1,0 +1,6 @@
+flex Q1.l
+gcc lex.yy.c -o Qsolution -lfl
+for question 1
+./Qsolution file_name
+for question 2
+./Qsolution 
