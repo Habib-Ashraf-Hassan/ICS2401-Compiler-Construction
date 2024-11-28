@@ -15,7 +15,7 @@ void replace_abc(char* str) {
 %%
 
 abc         { printf("ABC"); }
-[a-zA-Z]+   { 
+[a-zA-Z0-9]+   { 
                 replace_abc(yytext);
                 printf("%s", yytext);
             }
