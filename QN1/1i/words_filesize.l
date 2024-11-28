@@ -16,7 +16,7 @@ int total_file_size = 0;
 int main() {
     yylex();
     printf("Number of words: %d\n", word_count);
-    // printf("Total size of words: %d\n", total_word_size);
+    printf("Total size of words: %d\n", total_word_size);
     printf("Total file size: %d characters/bytes \n", total_file_size);
     return 0;
 }
