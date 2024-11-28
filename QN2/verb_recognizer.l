@@ -1,14 +1,15 @@
 %{
 #include <stdio.h>
 
-int verb_count = 0;  
+// Global variables to count and store recognized verbs
+int verb_count = 0;
+char recognized_verbs[100][50];  // Array to store recognized verbs
 %}
 
 %%
 
 is|am|are|were|was|be|being|been|do|does|did|will|would|should|can|could|has|have|had|go  {
-    printf("Verb: %s\n", yytext);  
-    verb_count++; 
+    strcpy(recognized_verbs[verb_count++], yytext);
 } 
 
 [a-zA-Z]+ { /* Ignores other words */ }
@@ -20,10 +21,19 @@ is|am|are|were|was|be|being|been|do|does|did|will|would|should|can|could|has|hav
 %%
 
 int main() {
-    printf("Enter a sentence: ");
-    yylex();  
+    yylex(); // Start the lexical analysis
 
-    printf("\nTotal number of verbs found: %d\n", verb_count);
+    // Output the results
+    if (verb_count > 0) {
+        printf("Number of verbs recognized: %d\n", verb_count);
+        printf("Verbs recognized: ");
+        for (int i = 0; i < verb_count; i++) {
+            printf("%s ", recognized_verbs[i]);
+        }
+        printf("\n");
+    } else {
+        printf("0 verbs recognized\n");
+    }
     return 0;
 }
 
