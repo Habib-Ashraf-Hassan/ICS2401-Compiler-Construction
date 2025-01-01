@@ -10,3 +10,25 @@ Create an interpreter using LEX and YACC which will count the number of a’s in
 input string.
 3. Write a LEX and YACC specification files for a small calculator that can add and
 subtract numbers.
+
+## Requirements
+### Essential build tools
+```bash
+sudo apt-get install build-essential
+
+```
+### Flex (lexical analyzer generator)
+```bash
+sudo apt-get install flex
+
+```
+### Bison (parser generator)
+```bash
+sudo apt-get install bison
+
+```
+### GCC compiler
+```bash
+sudo apt-get install gcc
+
+```
